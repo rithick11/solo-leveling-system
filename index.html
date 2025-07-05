@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling System - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/anim.css">
+</head>
+
+<body class="login-page">
+    <div class="system-message">
+        <p>SYSTEM INITIALIZING...</p>
+    </div>
+    
+    <div class="login-container">
+        <div class="system-gif">
+            <img src="pictures\221577.gif" alt="System Gate Activation">
+        </div>
+        
+        <div class="system-notification">
+            <p>Welcome to the Dual World Gate System</p>
+        </div>
+        
+        <div class="system-header">
+            <h1>PLAYER LOGIN</h1>
+            <div class="system-divider"></div>
+        </div>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="playerName">HUNTER NAME:</label>
+                <input type="text" id="playerName" required>
+            </div>
+            <button type="submit" class="btn-system">ACCESS SYSTEM</button>
+        </form>
+        
+        <div class="warning-message">
+            <p>WARNING: Once you accept the system, there's no turning back.</p>
+            <p class="system-timer">SYSTEM INITIALIZATION: <span id="initTimer">00:00:07</span></p>
+        </div>
+    </div>
+    
+    <audio id="loginSound" src="C:\solo\sounds\deep-and-cinematic-woosh-sound-effect-318325.mp3" preload="auto"></audio>
+    <script src="js/auth.js"></script>
+</body>
+</html>

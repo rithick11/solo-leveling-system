@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling System - Inventory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/anim.css">
+</head>
+<body class="dashboard">
+    <div class="gold-display">
+        <img src="pictures\ChatGPT Image Jul 4, 2025, 09_41_23 PM.png"alt="Gold">
+        <span id="playerGold">0</span>
+    </div>
+    
+    <div class="system-overlay">
+        <div class="player-status">
+            <div class="status-header">
+                <h2>INVENTORY</h2>
+                <div class="level-display">
+                    <span id="playerLevel">1</span>
+                    <span>LEVEL</span>
+                </div>
+            </div>
+            
+            
+        
+        <nav class="system-nav">
+            <button class="btn-nav" data-page="dashboard">DASHBOARD</button>
+            <button class="btn-nav" data-page="quests">DAILY QUESTS</button>
+            <button class="btn-nav" data-page="levels">LEVEL PROGRESSION</button>
+            <button class="btn-nav active" data-page="inventory">INVENTORY</button>
+        </nav>
+        
+        <main class="system-main">
+            <div class="inventory-notification">
+                <p>[Inventory System Activated]</p>
+            </div>
+            
+            <div class="inventory-tabs">
+                <button class="inventory-tab active" data-tab="weapons">WEAPONS</button>
+                <button class="inventory-tab" data-tab="armor">ARMOR</button>
+                <button class="inventory-tab" data-tab="consumables">CONSUMABLES</button>
+                <button class="inventory-tab" data-tab="quest-items">QUEST ITEMS</button>
+            </div>
+            
+            <div class="inventory-grid" id="weaponsTab">
+                <div class="inventory-item">
+                    <img src="pictures\dager.png" alt="Basic Dagger">
+                    <h4>Basic Dagger</h4>
+                    <p>+5 STR</p>
+                    <button class="btn-equip">EQUIP</button>
+                </div>
+                <div class="inventory-item locked">
+                    <img src="pictures\sword.png" alt="Shadow Sword">
+                    <h4>Shadow Sword</h4>
+                    <p>Level 5 Required</p>
+                    <p>+15 STR</p>
+                </div>
+                <div class="inventory-item locked">
+                    <img src="pictures\scy.png" alt="Reaper's Scythe">
+                    <h4>Reaper's Scythe</h4>
+                    <p>Level 10 Required</p>
+                    <p>+30 STR</p>
+                </div>
+            </div>
+            
+            <div class="inventory-grid hidden" id="armorTab">
+                <div class="inventory-item">
+                    <img src="pictures\vest.jpg" alt="Leather Armor">
+                    <h4>Leather Armor</h4>
+                    <p>+10 VIT</p>
+                    <button class="btn-equip">EQUIP</button>
+                </div>
+                <div class="inventory-item locked">
+                    <img src="pictures\chain mall.png" alt="Chainmail">
+                    <h4>Chainmail</h4>
+                    <p>Level 5 Required</p>
+                    <p>+25 VIT</p>
+                </div>
+            </div>
+            
+            <div class="inventory-grid hidden" id="consumablesTab">
+                <div class="inventory-item">
+                    <img src="pictures\health.jpg" alt="Health Potion">
+                    <h4>Health Potion</h4>
+                    <p>x5</p>
+                    <button class="btn-use">USE</button>
+                </div>
+                <div class="inventory-item">
+                    <img src="pictures\life.jpg" alt="Stamina Elixir">
+                    <h4>Stamina Elixir</h4>
+                    <p>x3</p>
+                    <button class="btn-use">USE</button>
+                </div>
+            </div>
+            
+            <div class="inventory-grid hidden" id="quest-itemsTab">
+                <div class="inventory-item">
+                    <img src="pictures\key.png" alt="Dungeon Key">
+                    <h4>Dungeon Key</h4>
+                    <p>Quest: The First Gate</p>
+                    <button class="btn-use">USE</button>
+                </div>
+            </div>
+            
+            <div class="inventory-shop">
+                <h3>SHOP</h3>
+                <button class="btn-shop" onclick="openShop()">VISIT SHOP</button>
+            </div>
+        </main>
+    </div>
+    <audio id="clickSound" src="sounds\deep-and-cinematic-woosh-sound-effect-318325.mp3" preload="auto"></audio>
+    <audio id="equipSound" src="sounds\deep-and-cinematic-woosh-sound-effect-318325.mp3" preload="auto"></audio>
+    <audio id="useSound" src="sounds\deep-and-cinematic-woosh-sound-effect-318325.mp3" preload="auto"></audio>
+    <script src="js/auth.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/inventory.js"></script>
+</body>
+</html>

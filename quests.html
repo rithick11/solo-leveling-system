@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling System - Daily Quests</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/anim.css">
+</head>
+<body class="dashboard">
+    <div class="gold-display">
+        <img src="pictures\ChatGPT Image Jul 4, 2025, 09_41_23 PM.png" alt="Gold">
+        <span id="playerGold">0</span>
+    </div>
+    
+    <div class="system-overlay">
+        <div class="player-status">
+            <div class="status-header">
+                <h2>QUEST INFO</h2>
+                <div class="level-display">
+                    <span id="playerLevel">1</span>
+                    <span>LEVEL</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="system-nav">
+            <button class="btn-nav" data-page="dashboard">DASHBOARD</button>
+            <button class="btn-nav active" data-page="quests">DAILY QUESTS</button>
+            <button class="btn-nav" data-page="levels">LEVEL PROGRESSION</button>
+            <button class="btn-nav" data-page="inventory">INVENTORY</button>
+        </nav>
+        
+        <main class="system-main">
+            <div class="quest-notification">
+                <p>[Daily Quest: Player Training has arrived]</p>
+            </div>
+            
+            <div class="quest-goal">
+                <h3>GOAL</h3>
+                <div class="goal-list">
+                    <div class="goal-item">
+                        <span>Push-ups</span>
+                        <span class="goal-progress">[0/15]</span>
+                    </div>
+                    <div class="goal-item">
+                        <span>Sit-ups</span>
+                        <span class="goal-progress">[0/15]</span>
+                    </div>
+                    <div class="goal-item">
+                        <span>Squats</span>
+                        <span class="goal-progress">[0/15]</span>
+                    </div>
+                    <div class="goal-item">
+                        <span>Running</span>
+                        <span class="goal-progress">[0/10km]</span>
+                    </div>
+                    <div class="goal-item">
+                        <span>Chapter Reading</span>
+                        <span class="goal-progress">[0/1.5]</span>
+                    </div>
+                    <div class="goal-item">
+                        <span>Proper Last Night Sleep</span>
+                        <span class="goal-progress">[0/1]</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quest-rewards">
+                <h3>PREVIEW REWARDS</h3>
+                <ul>
+                    <li>+50 Gold</li>
+                    <li>+5 STR</li>
+                    <li>+5 VIT</li>
+                    <li>+100 EXP</li>
+                </ul>
+            </div>
+            
+            <button class="btn-quest" onclick="completeQuest(1)">COMPLETE QUEST</button>
+            
+            <div class="quest-warning">
+                <p>WARNING: Failure to complete the daily quest will result in an appropriate penalty.</p>
+                <p class="system-timer">01:09:07</p>
+            </div>
+        </main>
+    </div>
+    <audio id="hoverSound" src=C:\solo\sounds\deep-and-cinematic-woosh-sound-effect-318325.mp3 preload="auto"></audio>
+    <audio id="clickSound" src=C:\solo\sounds\deep-and-cinematic-woosh-sound-effect-318325.mp3 preload="auto"></audio>
+    <audio id="questCompleteSound" src="C:\solo\sounds\deep-and-cinematic-woosh-sound-effect-318325.mp3" preload="auto"></audio>
+    <audio id="questFailSound" src="C:\solo\sounds\deep-and-cinematic-woosh-sound-effect-318325.mp3" preload="auto"></audio>
+    <script src="js/auth.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/quests.js"></script>
+</body>
+</html>

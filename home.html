@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling System - Player Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/anim.css">
+    <style>
+        /* Player Avatar Styles */
+        .player-avatar {
+            position: absolute;
+            top: 100px;
+            right: 780px;
+            z-index: 10;
+            width: 140px;
+            height: 140px;
+            border-radius: 100%;
+            overflow: hidden;
+            border: 2px solid #0af;
+            box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .player-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Gold Display Styles */
+        .gold-display {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1px solid gold;
+            color: gold;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .gold-icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* System Overlay */
+        .system-overlay {
+            margin-top: 20px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.85);
+            border: 2px solid #0af;
+            border-radius: 5px;
+            padding: 1.5rem;
+            box-shadow: 0 0 30px #0af;
+        }
+        
+        /* Avatar Level Effects */
+        .avatar-level-1 {
+            border-color: #ccc;
+            box-shadow: 0 0 10px #ccc;
+        }
+        
+        .avatar-level-10 {
+            border-color: #0af;
+            box-shadow: 0 0 15px #0af;
+        }
+        
+        .avatar-level-30 {
+            border-color: #f80;
+            box-shadow: 0 0 20px #f80;
+        }
+        
+        .avatar-level-50 {
+            border-color: gold;
+            box-shadow: 0 0 25px gold;
+        }
+        
+        /* Fallback for avatar */
+        .avatar-fallback {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            color: #0af;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .player-avatar {
+                width: 60px;
+                height: 60px;
+                top: 10px;
+                left: 10px;
+            }
+            
+            .gold-display {
+                top: 10px;
+                right: 10px;
+                font-size: 1rem;
+            }
+            
+            .system-overlay {
+                margin-top: 80px;
+                padding: 1rem;
+            }
+        }
+        /* Add these new styles */
+        .empty-shadows {
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+        .dungeon-map-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            margin: 10px 0;
+            border: 1px solid #0af;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body class="dashboard">
+    <!-- Avatar in top left with data attributes for different level images -->
+    <div class="player-avatar avatar-level-1">
+        <img src="pictures\frf.gif" alt="Player Avatar" id="avatarImage"  >
+    </div>
+    
+    <!-- Gold display in top right -->
+    <div class="gold-display">
+        <img src="pictures\ChatGPT Image Jul 4, 2025, 09_41_23 PM.png" alt="Gold" class="gold-icon">
+        <span id="playerGold">0</span>
+    </div>
+    
+    <!-- Hidden image elements for fallback -->
+    <div style="display:none;">
+        <img src="pictures\sung_jin_woo.jpg" id="fallbackAvatar1">
+        <img src="pictures\sung_jin_woo.jpg" id="fallbackAvatar2">
+    </div>
+
+
+    
+    <div class="system-overlay">
+        <div class="player-status">
+            <div class="status-header">
+                <h2>STATUS</h2>
+                <div class="level-display">
+                    <span id="playerLevel">1</span>
+                    <span>LEVEL</span>
+                </div>
+            </div>
+            
+            <div class="status-details">
+                <div class="job-title">
+                    <p>JOB: <span id="playerJob">Shadow Monarch</span></p>
+                    <p>TITLE: <span id="playerTitle">The One Who Overcame Adversity</span></p>
+                </div>
+                
+                <div class="service-list">
+                    <div class="service-item">SHADOW ARMY</div>
+                    <div class="service-item">DUNGEON MAP</div>
+                    <div class="service-item">SKILL TREE</div>
+                    <div class="service-item">ACHIEVEMENTS</div>
+                </div>
+            </div>
+            
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <span>STR:</span>
+                    <span id="playerSTR">239</span>
+                    <span class="stat-bonus">(+55)</span>
+                </div>
+                <div class="stat-item">
+                    <span>VIT:</span>
+                    <span id="playerVIT">211</span>
+                    <span class="stat-bonus">(+55)</span>
+                </div>
+                <div class="stat-item">
+                    <span>AGI:</span>
+                    <span id="playerAGI">235</span>
+                    <span class="stat-bonus">(+70)</span>
+                </div>
+                <div class="stat-item">
+                    <span>INT:</span>
+                    <span id="playerINT">240</span>
+                    <span class="stat-bonus">(+55)</span>
+                </div>
+                <div class="stat-item">
+                    <span>PER:</span>
+                    <span id="playerPER">207</span>
+                    <span class="stat-bonus">(+55)</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="system-nav">
+            <button class="btn-nav active" data-page="dashboard">DASHBOARD</button>
+            <button class="btn-nav" data-page="quests">DAILY QUESTS</button>
+            <button class="btn-nav" data-page="levels">LEVEL PROGRESSION</button>
+            <button class="btn-nav" data-page="inventory">INVENTORY</button>
+        </nav>
+        
+        <main class="system-main">
+            <div class="welcome-message">
+                <h2>SYSTEM MESSAGE</h2>
+                <p>Welcome, <span id="displayName">Player</span>. You have been chosen by the system.</p>
+                <p>Complete daily quests to grow stronger and progress through levels.</p>
+            </div>
+            
+            <div class="daily-progress">
+                <h3>DAILY PROGRESS</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="dailyProgress"></div>
+                </div>
+                <p id="progressText">0/3 Daily Quests Completed</p>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Sound elements -->
+    <audio id="hoverSound" src=C:\solo\sounds\deep-and-cinematic-woosh-sound-effect-318325.mp3 preload="auto"></audio>
+    <audio id="clickSound" src=C:\solo\sounds\deep-and-cinematic-woosh-sound-effect-318325.mp3 preload="auto"></audio>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/home.js"></script>
+    
+</body>
+</html>

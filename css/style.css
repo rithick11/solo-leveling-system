@@ -1,0 +1,1187 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', 'Courier New', monospace;
+}
+
+body {
+    background-color: #000;
+    color: #0af;
+    overflow-x: hidden;
+}
+
+/* Login Page */
+.login-page {
+    background: url("../images/system-bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.system-message {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #f00;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #f00;
+    animation: blink 1.5s infinite;
+}
+
+.login-container {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #0af;
+    border-radius: 5px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px #0af;
+    z-index: 10;
+}
+
+.system-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.system-header h1 {
+    color: #fff;
+    text-shadow: 0 0 10px #0af;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.system-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #0af, transparent);
+    margin: 0.5rem auto;
+    width: 80%;
+}
+
+.system-notification {
+    background: rgba(0, 20, 40, 0.9);
+    border: 1px solid #0af;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #0af;
+    letter-spacing: 1px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    background: #111;
+    border: 1px solid #0af;
+    color: #0af;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.btn-system {
+    background: linear-gradient(to bottom, #006, #002);
+    color: #0af;
+    border: 1px solid #0af;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-system:hover {
+    background: linear-gradient(to bottom, #008, #004);
+    box-shadow: 0 0 10px #0af;
+}
+
+.warning-message {
+    margin-top: 1.5rem;
+    color: #f00;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.system-timer {
+    margin-top: 0.5rem;
+    color: #0af;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Dashboard */
+.dashboard {
+    background: url('../images/system-background.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.system-overlay {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #0af;
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 0 30px #0af;
+}
+
+.player-status {
+    background: rgba(0, 10, 20, 0.7);
+    border: 1px solid #0af;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #0af;
+}
+
+.status-header h2 {
+    color: #0af;
+    text-shadow: 0 0 5px #0af;
+    letter-spacing: 1px;
+}
+
+.level-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.level-display span:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.level-display span:last-child {
+    font-size: 0.8rem;
+    color: #0af;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-details {
+    margin: 1rem 0;
+}
+
+.job-title p {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+    letter-spacing: 1px;
+}
+
+.job-title span {
+    color: #0af;
+    font-weight: bold;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.service-item {
+    background: rgba(0, 20, 40, 0.7);
+    border: 1px solid #0af;
+    padding: 0.5rem;
+    text-align: center;
+    color: #0af;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.service-item:hover {
+    background: rgba(0, 30, 60, 0.7);
+    box-shadow: 0 0 10px #0af;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background: rgba(0, 5, 15, 0.7);
+    border: 1px solid #0af;
+}
+
+.stat-item span:first-child {
+    color: #0af;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.stat-item span:nth-child(2) {
+    color: #fff;
+    font-weight: bold;
+}
+
+.stat-bonus {
+    color: #0f0;
+    font-size: 0.8rem;
+}
+
+.system-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #0af;
+    padding-bottom: 1rem;
+}
+
+.btn-nav {
+    background: none;
+    border: none;
+    color: #0af;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-nav:hover, .btn-nav.active {
+    color: #fff;
+    text-shadow: 0 0 10px #0af;
+    border-bottom: 2px solid #0af;
+}
+
+.system-main {
+    padding: 1rem;
+}
+
+.welcome-message {
+    background: rgba(0, 10, 20, 0.7);
+    border: 1px solid #0af;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.welcome-message h2 {
+    color: #0af;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px #0af;
+    letter-spacing: 1px;
+}
+
+.welcome-message p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.accept-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.daily-progress {
+    background: rgba(0, 10, 20, 0.7);
+    border: 1px solid #0af;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.daily-progress h3 {
+    color: #0af;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #111;
+    border: 1px solid #0af;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #006, #0af);
+    width: 0%;
+    transition: width 0.5s;
+}
+
+/* Quest Page */
+.quest-notification {
+    background: rgba(0, 20, 40, 0.9);
+    border: 1px solid #0af;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.quest-goal {
+    background: rgba(0, 10, 20, 0.7);
+    border: 1px solid #0af;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.quest-goal h3 {
+    color: #0af;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.goal-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.goal-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: rgba(0, 5, 15, 0.7);
+    border: 1px solid #0af;
+    transition: all 0.3s;
+}
+
+.goal-item:hover {
+    background: rgba(0, 15, 30, 0.7);
+    box-shadow: 0 0 5px #0af;
+}
+
+.goal-item span:first-child {
+    color: #0af;
+}
+
+.goal-progress {
+    color: #fff;
+    font-weight: bold;
+}
+
+.quest-rewards {
+    background: rgba(0, 10, 20, 0.7);
+    border: 1px solid #0af;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.quest-rewards h3 {
+    color: #0af;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.quest-rewards ul {
+    list-style: none;
+}
+
+.quest-rewards li {
+    margin-bottom: 0.5rem;
+    color: #0af;
+    letter-spacing: 1px;
+}
+
+.btn-quest {
+    background: linear-gradient(to bottom, #006, #002);
+    color: #0af;
+    border: 1px solid #0af;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-quest:hover:not(:disabled) {
+    background: linear-gradient(to bottom, #008, #004);
+    box-shadow: 0 0 10px #0af;
+}
+
+.quest-warning {
+    color: #f00;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 1rem;
+    border: 1px solid #f00;
+}
+
+/* Level Progression Specific Styles */
+.exp-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(0, 10, 20, 0.7);
+    border: 1px solid #0af;
+}
+
+.exp-bar-container {
+    flex: 2;
+    padding-right: 1rem;
+}
+
+.exp-bar {
+    width: 100%;
+    height: 20px;
+    background: #111;
+    border: 1px solid #0af;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.exp-fill {
+    height: 100%;
+    background: linear-gradient(to right, #006, #0af);
+    width: 0%;
+}
+
+.next-level-reward {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    background: rgba(0, 20, 40, 0.7);
+    border: 1px solid #0af;
+}
+
+.next-level-reward h3 {
+    color: #0af;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.next-level-reward p {
+    color: #ff0;
+    font-weight: bold;
+}
+
+.milestone-notification {
+    background: rgba(0, 20, 40, 0.9);
+    border: 1px solid #0af;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.level-rewards {
+    background: rgba(0, 10, 20, 0.7);
+    border: 1px solid #0af;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.level-rewards h3 {
+    color: #0af;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.level-item {
+    background: rgba(0, 5, 15, 0.7);
+    border: 1px solid #0af;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.level-item h4 {
+    color: #0af;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.level-item p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.level-item .special-reward {
+    color: #ff0;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.level-item.completed {
+    border-color: #0f0;
+    background: rgba(0, 15, 5, 0.7);
+}
+
+.level-item.completed h4 {
+    color: #0f0;
+}
+
+.level-item.current {
+    border-color: #ff0;
+    background: rgba(20, 20, 0, 0.7);
+    box-shadow: 0 0 15px #ff0;
+    animation: pulse 2s infinite;
+}
+
+.level-item.current h4 {
+    color: #ff0;
+}
+
+.more-levels {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    font-style: italic;
+    color: #ccc;
+    text-align: center;
+}
+
+.special-abilities {
+    background: rgba(0, 10, 20, 0.7);
+    border: 1px solid #0af;
+    padding: 1.5rem;
+}
+
+.special-abilities h3 {
+    color: #0af;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.abilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.ability-item {
+    background: rgba(0, 5, 15, 0.7);
+    border: 1px solid #0af;
+    padding: 1rem;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ability-item.locked {
+    border-color: #f00;
+    background: rgba(15, 0, 0, 0.7);
+}
+
+.ability-item.unlocked {
+    border-color: #0f0;
+    background: rgba(0, 15, 5, 0.7);
+    animation: pulse 3s infinite;
+}
+
+.ability-item h4 {
+    color: #0af;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.ability-item p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.ability-description {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 0.5rem;
+}
+
+/* System Message Overlay */
+.system-message-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.system-message-container {
+    background: rgba(0, 5, 15, 0.9);
+    border: 2px solid #0af;
+    border-radius: 5px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 30px #0af;
+    animation: systemBoot 0.5s ease-out;
+}
+
+.system-message {
+    text-align: center;
+}
+
+.system-message h2 {
+    color: #0af;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px #0af;
+    letter-spacing: 2px;
+}
+
+.message-content {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.message-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.player-name {
+    color: #0af;
+    font-weight: bold;
+}
+
+.message-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.system-loading {
+    color: #0af;
+    animation: blink 1.5s infinite;
+}
+
+/* Acceptance Animation */
+.system-message.accepting {
+    animation: pulse 0.5s;
+}
+
+.system-message.accepting .message-content p {
+    animation: statIncrease 0.5s forwards;
+}
+
+/* Gold Display */
+.gold-display {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid gold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    z-index: 100;
+}
+
+.gold-display img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+}
+
+.gold-display span {
+    color: gold;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Player Avatar */
+.player-avatar {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.player-avatar img {
+    max-width: 200px;
+    border: 2px solid #0af;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #0af;
+}
+
+/* Inventory Styles */
+.inventory-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: rgba(0, 20, 40, 0.7);
+    border: 1px solid #0af;
+}
+
+.inventory-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #0af;
+    padding-bottom: 0.5rem;
+}
+
+.inventory-tab {
+    background: none;
+    border: none;
+    color: #0af;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.inventory-tab.active {
+    color: #fff;
+    border-bottom: 2px solid #0af;
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.inventory-item {
+    background: rgba(0, 5, 15, 0.7);
+    border: 1px solid #0af;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.inventory-item.locked {
+    opacity: 0.6;
+    border-color: #f00;
+}
+
+.inventory-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.inventory-item h4 {
+    color: #0af;
+    margin-bottom: 0.3rem;
+}
+
+.inventory-item p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-equip, .btn-use {
+    background: linear-gradient(to bottom, #006, #002);
+    color: #0af;
+    border: 1px solid #0af;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+    transition: all 0.3s;
+}
+
+.btn-equip:hover, .btn-use:hover {
+    background: linear-gradient(to bottom, #008, #004);
+    box-shadow: 0 0 5px #0af;
+}
+
+.inventory-shop {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(0, 10, 20, 0.7);
+    border: 1px solid #0af;
+}
+
+.btn-shop {
+    background: linear-gradient(to bottom, #060, #020);
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-shop:hover {
+    background: linear-gradient(to bottom, #080, #040);
+    box-shadow: 0 0 10px #0f0;
+}
+
+/* System GIF */
+.system-gif {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.system-gif img {
+    max-width: 100%;
+    border-radius: 5px;
+    border: 1px solid #0af;
+}
+
+/* Level Up Effects */
+.level-up {
+    position: relative;
+    overflow: hidden;
+}
+
+.level-up-gif {
+    margin-top: 1rem;
+}
+
+.level-up-gif img {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Gold Effects */
+.gold-effect img {
+    width: 100px;
+    margin-top: 0.5rem;
+}
+
+/* Quest Complete Animation */
+.quest-complete-animation {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.quest-complete-animation img {
+    max-width: 200px;
+    margin-bottom: 0.5rem;
+}
+
+.quest-complete-animation p {
+    color: #0f0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px #0f0;
+}
+
+/* Bonus Effects */
+.bonus-gif {
+    width: 100px;
+    margin: 0.5rem auto;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .goal-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .system-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .exp-display {
+        flex-direction: column;
+    }
+    
+    .exp-bar-container {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .inventory-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+/* Level Up Preview Styles */
+.level-up-preview {
+    background: rgba(0, 10, 20, 0.7);
+    border: 1px solid #0af;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.level-up-preview h3 {
+    color: #0af;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.btn-preview {
+    background: linear-gradient(to bottom, #006, #002);
+    color: #0af;
+    border: 1px solid #0af;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-preview:hover {
+    background: linear-gradient(to bottom, #008, #004);
+    box-shadow: 0 0 10px #0af;
+}
+
+.preview-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    text-align: left;
+    padding: 1rem;
+    background: rgba(0, 5, 15, 0.7);
+    border: 1px solid #0af;
+}
+
+.preview-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+}
+
+.preview-item span {
+    margin: 0 0.2rem;
+}
+
+.current-value {
+    color: #ccc;
+}
+
+.new-value {
+    color: #0f0;
+    font-weight: bold;
+}
+
+.arrow {
+    color: #0af;
+}
+
+.preview-milestone {
+    grid-column: 1 / -1;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background: rgba(0, 20, 40, 0.7);
+    border: 1px solid #0af;
+}
+
+.preview-milestone p {
+    color: #ff0;
+    font-weight: bold;
+}
+
+.preview-animation {
+    animation: pulse 0.5s ease;
+}
+
+/* Ability Unlock Notification */
+.ability-unlock {
+    position: relative;
+    overflow: hidden;
+}
+
+.ability-unlock p {
+    margin-bottom: 0.5rem;
+}
+
+.ability-unlock-gif {
+    width: 100px;
+    margin: 0.5rem auto;
+    display: block;
+}
+/* Shadow Army Notification */
+.shadow-army-notification {
+    text-align: center;
+}
+
+.shadow-count {
+    font-size: 1.5rem;
+    color: #0af;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.shadow-preview {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.shadow-preview img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border: 1px solid #0af;
+    border-radius: 5px;
+}
+
+.more-shadows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0af;
+    font-weight: bold;
+}
+
+.empty-shadows {
+    width: 100px;
+    margin: 0.5rem auto;
+    display: block;
+}
+
+/* Dungeon Map Notification */
+.dungeon-map-notification {
+    text-align: center;
+}
+
+.dungeon-map-image {
+    max-width: 100%;
+    border: 1px solid #0af;
+    margin: 0.5rem 0;
+}
+
+/* Achievements Notification */
+.achievements-notification {
+    text-align: center;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.achievement-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievement-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.achievement-item p {
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 0.3rem;
+}
+
+/* Coming Soon Notification */
+.coming-soon-notification {
+    text-align: center;
+}
+
+.coming-soon-notification img {
+    max-width: 150px;
+    margin: 0.5rem auto;
+}
+
+/* Welcome Message */
+.welcome-message {
+    text-align: center;
+}
+
+.welcome-gif {
+    max-width: 200px;
+    margin: 0.5rem auto;
+}
+
+/* Reset Message */
+.reset-message {
+    text-align: center;
+}
+
+.reset-gif {
+    max-width: 150px;
+    margin: 0.5rem auto;
+}
+
+/* Stat Hover Effect */
+.stat-hover {
+    animation: pulse 0.5s infinite;
+    color: #ff0 !important;
+}

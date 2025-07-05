@@ -1,0 +1,332 @@
+/* Base Animation Styles */
+@keyframes systemBoot {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes terminalTyping {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes glitchEffect {
+    0% { text-shadow: 2px 0 #0af, -2px 0 #f00; }
+    5% { text-shadow: -2px 0 #0af, 2px 0 #f00; }
+    10% { text-shadow: 2px 0 #f00, -2px 0 #0af; }
+    15% { text-shadow: -2px 0 #f00, 2px 0 #0af; }
+    20% { text-shadow: none; }
+    100% { text-shadow: none; }
+}
+
+@keyframes powerUp {
+    0% { transform: scale(1); box-shadow: 0 0 10px #0af; }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px #0af; }
+    100% { transform: scale(1); box-shadow: 0 0 10px #0af; }
+}
+
+@keyframes statIncrease {
+    from { color: #fff; transform: scale(1); }
+    to { color: #0f0; transform: scale(1.2); }
+}
+
+@keyframes damageEffect {
+    from { color: #fff; transform: translateX(0); }
+    to { color: #f00; transform: translateX(10px); }
+}
+
+/* System Interface Animations */
+.system-overlay {
+    animation: systemBoot 0.8s ease-out forwards;
+}
+
+.system-notification {
+    animation: terminalTyping 0.5s steps(40, end), glitchEffect 2s linear;
+}
+
+.stat-item span:nth-child(2) {
+    transition: all 0.3s ease;
+}
+
+.stat-item span:nth-child(2):hover {
+    animation: powerUp 0.5s ease;
+}
+
+/* Quest Animations */
+.goal-item {
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.goal-item:hover {
+    animation: powerUp 0.5s ease infinite alternate;
+}
+
+.btn-quest:not(:disabled):hover {
+    animation: powerUp 0.3s ease infinite alternate;
+}
+
+/* Level Up Animations */
+@keyframes levelUpFlash {
+    0% { background-color: rgba(0, 170, 255, 0.1); }
+    50% { background-color: rgba(0, 170, 255, 0.5); }
+    100% { background-color: rgba(0, 170, 255, 0.1); }
+}
+
+.level-up-effect {
+    animation: levelUpFlash 1s ease infinite, powerUp 0.5s ease infinite alternate;
+}
+
+/* Stat Increase Animations */
+.stat-increase {
+    animation: statIncrease 0.5s ease forwards;
+}
+
+/* Damage Effect */
+.stat-decrease {
+    animation: damageEffect 0.5s ease forwards;
+}
+
+/* Progress Bar Animations */
+@keyframes progressPulse {
+    0% { box-shadow: 0 0 5px #0af; }
+    50% { box-shadow: 0 0 15px #0af; }
+    100% { box-shadow: 0 0 5px #0af; }
+}
+
+.progress-fill, .exp-fill {
+    animation: progressPulse 2s ease infinite;
+}
+
+/* Button Animations */
+@keyframes btnHover {
+    0% { box-shadow: 0 0 5px #0af; }
+    100% { box-shadow: 0 0 15px #0af; }
+}
+
+.btn-system:hover {
+    animation: btnHover 0.5s ease forwards;
+}
+
+/* System Alert Animations */
+@keyframes systemAlert {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.system-alert {
+    animation: systemAlert 0.3s ease-out forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Fade Out Animation */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in forwards;
+}
+
+/* Text Glow Animation */
+@keyframes textGlow {
+    0% { text-shadow: 0 0 5px #0af; }
+    50% { text-shadow: 0 0 20px #0af; }
+    100% { text-shadow: 0 0 5px #0af; }
+}
+
+.text-glow {
+    animation: textGlow 2s ease infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 1s ease infinite;
+}
+
+/* Blink Animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    animation: blink 1.5s infinite;
+}
+
+/* Gold Shine Animation */
+@keyframes goldShine {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.5); }
+    100% { filter: brightness(1); }
+}
+
+.gold-shine {
+    animation: goldShine 2s infinite;
+}
+
+/* Quest Complete Animation */
+@keyframes questComplete {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.quest-complete {
+    animation: questComplete 0.5s ease-out forwards;
+}
+
+/* Item Unlock Animation */
+@keyframes itemUnlock {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(5deg) scale(1.1); }
+    50% { transform: rotate(-5deg) scale(1.1); }
+    75% { transform: rotate(5deg) scale(1.1); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.item-unlock {
+    animation: itemUnlock 0.5s ease-out;
+}
+
+/* Level Up Text Animation */
+@keyframes levelUpText {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(-40px); opacity: 0; }
+}
+
+.level-up-text {
+    animation: levelUpText 1.5s ease-out forwards;
+}
+
+/* Inventory Tab Switch Animation */
+@keyframes tabSwitch {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.tab-switch {
+    animation: tabSwitch 0.3s ease-out forwards;
+}
+
+/* Button Press Animation */
+@keyframes buttonPress {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.button-press {
+    animation: buttonPress 0.2s ease-out;
+}
+
+/* System Loading Animation */
+@keyframes systemLoading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.system-loading-icon {
+    animation: systemLoading 1s linear infinite;
+}
+
+/* Health Bar Animation */
+@keyframes healthDecrease {
+    from { width: 100%; background-color: #0f0; }
+    to { width: var(--health-value); background-color: #f00; }
+}
+
+.health-decrease {
+    animation: healthDecrease 0.5s ease-out forwards;
+}
+
+/* Mana Bar Animation */
+@keyframes manaDecrease {
+    from { width: 100%; }
+    to { width: var(--mana-value); }
+}
+
+.mana-decrease {
+    animation: manaDecrease 0.5s ease-out forwards;
+}
+
+/* Critical Hit Animation */
+@keyframes criticalHit {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+.critical-hit {
+    animation: criticalHit 0.3s ease-out;
+}
+
+/* Damage Number Animation */
+@keyframes damageNumber {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-50px); }
+}
+
+.damage-number {
+    animation: damageNumber 1s ease-out forwards;
+}
+
+/* Heal Number Animation */
+@keyframes healNumber {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-50px); }
+}
+
+.heal-number {
+    animation: healNumber 1s ease-out forwards;
+    color: #0f0;
+}
+
+/* Inventory Item Hover Animation */
+@keyframes inventoryHover {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.inventory-hover {
+    animation: inventoryHover 0.5s ease infinite;
+}
+
+/* Gold Coin Spin Animation */
+@keyframes goldSpin {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.gold-spin {
+    animation: goldSpin 1s linear infinite;
+}
+
+/* Quest Progress Animation */
+@keyframes questProgress {
+    from { width: 0%; }
+    to { width: var(--progress-value); }
+}
+
+.quest-progress {
+    animation: questProgress 1s ease-out forwards;
+}

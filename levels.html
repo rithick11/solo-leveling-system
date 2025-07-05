@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling System - Level Progression</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/anim.css">
+</head>
+<body class="dashboard">
+    <div class="gold-display">
+        <img src="pictures\ChatGPT Image Jul 4, 2025, 09_41_23 PM.png" alt="Gold">
+        <span id="playerGold">0</span>
+    </div>
+    
+    <div class="system-overlay">
+        <div class="player-status">
+            <div class="status-header">
+                <h2>LEVEL PROGRESSION</h2>
+                <div class="level-display">
+                    <span id="playerLevel">1</span>
+                    <span>LEVEL</span>
+                </div>
+            </div>
+            
+            <div class="exp-display">
+                <div class="exp-bar-container">
+                    <div class="exp-bar">
+                        <div class="exp-fill" id="expFill"></div>
+                    </div>
+                    <p id="expText">0/100 EXP to Next Level</p>
+                </div>
+                
+                <div class="next-level-reward">
+                    <h3>NEXT LEVEL REWARD</h3>
+                    <p id="nextLevelReward">+5 All Stats</p>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="system-nav">
+            <button class="btn-nav" data-page="dashboard">DASHBOARD</button>
+            <button class="btn-nav" data-page="quests">DAILY QUESTS</button>
+            <button class="btn-nav active" data-page="levels">LEVEL PROGRESSION</button>
+            <button class="btn-nav" data-page="inventory">INVENTORY</button>
+        </nav>
+        
+        <main class="system-main">
+            <div class="milestone-notification">
+                <p>[System Notification: Level Milestone Achieved]</p>
+            </div>
+            
+            <div class="level-rewards">
+                <h3>LEVEL REWARDS</h3>
+                <div class="rewards-grid" id="rewardsGrid">
+                    <!-- Levels will be dynamically generated here -->
+                </div>
+            </div>
+            
+            <div class="special-abilities">
+                <h3>SPECIAL ABILITIES UNLOCKED</h3>
+                <div class="abilities-grid">
+                    <div class="ability-item locked">
+                        <h4>Shadow Extraction</h4>
+                        <p>Unlocks at Level 10</p>
+                    </div>
+                    <div class="ability-item locked">
+                        <h4>Dominator's Touch</h4>
+                        <p>Unlocks at Level 20</p>
+                    </div>
+                    <div class="ability-item locked">
+                        <h4>Ruler's Authority</h4>
+                        <p>Unlocks at Level 30</p>
+                    </div>
+                    <div class="ability-item locked">
+                        <h4>Shadow Exchange</h4>
+                        <p>Unlocks at Level 40</p>
+                    </div>
+                    <div class="ability-item locked">
+                        <h4>Monarch's Domain</h4>
+                        <p>Unlocks at Level 50</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="level-up-preview">
+                <h3>LEVEL UP PREVIEW</h3>
+                <button class="btn-preview" onclick="previewLevelUp()">PREVIEW NEXT LEVEL</button>
+                <div class="preview-stats" id="previewStats"></div>
+            </div>
+        </main>
+    </div>
+    
+    <audio id="levelPreviewSound" src="C:\solo\sounds\solo_leveling_op_part2.mp3" preload="auto"></audio>
+    <audio id="abilityUnlockSound" src="C:\solo\sounds\solo_leveling_op_part2.mp3" preload="auto"></audio>
+    <script src="js/auth.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/levels.js"></script>
+</body>
+</html>
