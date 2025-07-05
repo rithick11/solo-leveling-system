@@ -278,7 +278,7 @@ function showWelcomeMessage() {
     welcomeMessage.innerHTML = `
         <p>WELCOME BACK, <span class="player-name">${playerName}</span></p>
         <p>Daily quests have been refreshed</p>
-        <img src="images/welcome.gif" alt="Welcome" class="welcome-gif">
+        
     `;
     
     document.querySelector('.system-main').prepend(welcomeMessage);
